@@ -9,7 +9,7 @@ docker rm -f factorio > /dev/null 2>&1
 # Run Factorio headless server
 docker run -d --name factorio -p "34197:34197/udp" -v "factorio_saves:/factorio/saves" hugecannon/factorio:latest \
 	--start-server bigResource \
-	--latency-ms 100 \
+	--latency 4 \
 	--autosave-interval 10 \
 	--autosave-slots 12
 
